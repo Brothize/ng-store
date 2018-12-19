@@ -1,0 +1,23 @@
+<nav class="navbar navbar-dark bg-dark mb-5">
+  <a class="navbar-brand" href="/">Ratasstic</a>
+  <div class="navbar-expand mr-auto">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link"><a routerLink="/home" routerLinkActive #rlaa="routerLinkActive" [ngClass]="rlaa.isActive ? 'link-active' : 'link-inactive'">Home</a></a>
+      <a class="nav-item nav-link"><a routerLink="/products" routerLinkActive #rlab="routerLinkActive" [ngClass]="rlab.isActive ? 'link-active' : 'link-inactive'">Produkte</a></a>
+      <a class="nav-item nav-link"><a routerLink="/shopping-cart" routerLinkActive #rlac="routerLinkActive" [ngClass]="rlac.isActive ? 'link-active' : 'link-inactive'">Zum Warenkorb <span class="badge badge-light">{{shopping}}</span></a></a>
+    </div>
+  </div>
+  <div class="navbar-expand ml-auto navbar-nav">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://www.facebook.com/Ratass-1669927146411553/?ref=br_rs"  target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a class="nav-item nav-link" href="https://twitter.com/search?q=%23ratass&src=typd&lang=de"  target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a class="nav-item nav-link" href="https://www.instagram.com/explore/tags/ratass/?max_id=1666242454355291302&hl=de" target="_blank">
+        <i class="fa fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</nav>

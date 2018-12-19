@@ -1,0 +1,18 @@
+.link-active {
+    color: white;
+}
+.link-active:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.link-inactive:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.link-inactive {
+    color: #909ca1;
+    text-decoration: none;
+}
+

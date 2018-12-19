@@ -1,0 +1,29 @@
+.product-wrapper {
+    display: flex;
+}
+
+.card {
+    margin: 1em;
+    height: 50%;
+}
+
+.anzahl {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+.anzahl:hover {
+    cursor: default;
+    background: none;
+}
+.preis:hover {
+    cursor: default;
+    background: none;
+}
+
+
+@media only screen and (max-width: 992px) { 
+    .product-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

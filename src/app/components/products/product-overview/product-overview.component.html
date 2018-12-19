@@ -1,0 +1,21 @@
+<app-layout>
+
+  <div class="product-wrapper">
+    <div *ngFor="let product of productsArray;" class="card text-white bg-dark mb-3" style="width: 18rem;">
+      <img class="card-img-top" src={{product.bild}} alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">{{product.beschreibung}}</p>
+        <a class="btn btn-outline-success float-left" (click)=getUp(product.name)><i class="fa fa-plus" aria-hidden="true"></i></a>
+        <a *ngIf="product.name == 'Kalender'" class="btn btn-outline-primary float-left anzahl">{{anzahlKalender}}</a>
+        <a *ngIf="product.name == 'Handyhülle'" class="btn btn-outline-primary float-left anzahl">{{anzahlHandy}}</a>
+        <a *ngIf="product.name == 'Wandfoto mit Rahmen'" class="btn btn-outline-primary float-left anzahl">{{anzahlWand}}</a>
+        <a *ngIf="product.name == 'Glückliches Polo'" class="btn btn-outline-primary float-left anzahl">{{anzahlPolo}}</a>
+        <a class="btn btn-outline-danger float-left" (click)=getDown(product.name)><i class="fa fa-minus" aria-hidden="true"></i></a>
+
+        <a class="btn btn-outline-primary float-right preis">{{product.preis}} €</a>
+      </div>
+    </div>
+  </div>
+
+</app-layout>

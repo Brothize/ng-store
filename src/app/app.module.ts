@@ -9,25 +9,37 @@ import {MatCardModule} from '@angular/material/card';
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 
-import { ShopOverviewComponent } from './shop-overview/shop-overview.component';
-import { ShopItemComponent } from './shop-item/shop-item.component';
-import { ShopItemDetailsComponent } from './shop-item-details/shop-item-details.component';
+import { UiModule } from './ui/ui.module';
+import { HomeComponent } from './components/home/home.component';
+import { ProductOverviewComponent } from './components/products/product-overview/product-overview.component';
+import { ProductItemComponent } from './components/products/product-item/product-item.component';
+import { ProductItemDetailComponent } from './components/products/product-item-detail/product-item-detail.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+
+import { ProductsService } from "./shared/services/products.service";
+import { ShoppingCartService } from "./shared/services/shopping-cart.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShopOverviewComponent,
-    ShopItemComponent,
-    ShopItemDetailsComponent
+    HomeComponent,
+    ProductOverviewComponent,
+    ProductItemComponent,
+    ProductItemDetailComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    UiModule
   ],
-  providers: [],
+  providers: [
+    ProductsService,
+    ShoppingCartService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
